@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+
+	<property name="GLOBAL_LOG_PATTERN" value="%date{HH:mm:ss.SSS} - actweb - %c - %5p [%thread] %caller{1} - %m%n%xThrowable{full}" />
+
+	<appender name="accessAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_PATH:-${java.io.tmpdir:-/tmp}}/accesslogs/access.%d{yyyy-MM-dd}.%i.log
+			</FileNamePattern>
+			<MaxHistory>15</MaxHistory>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${GLOBAL_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="runAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_PATH:-${java.io.tmpdir:-/tmp}}/runlogs/run.%d{yyyy-MM-dd}.%i.log
+			</FileNamePattern>
+			<MaxHistory>15</MaxHistory>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${GLOBAL_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="errorAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_PATH:-${java.io.tmpdir:-/tmp}}/errorlogs/error.%d{yyyy-MM-dd}.%i.log
+			</FileNamePattern>
+			<MaxHistory>15</MaxHistory>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${GLOBAL_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="accessLogger" additivity="false" level="INFO">
+		<appender-ref ref="accessAppender" />
+	</logger>
+	
+	<logger name="runLogger" additivity="false" level="INFO">
+		<appender-ref ref="runAppender" />
+	</logger>
+	
+	<logger name="errorLogger" additivity="false" level="ERROR">
+		<appender-ref ref="errorAppender" />
+		<appender-ref ref="CONSOLE" />
+	</logger>
+</configuration>

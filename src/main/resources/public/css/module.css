@@ -1,0 +1,79 @@
+body{background:#f1f1f2;font-family:"Hiragino Sans GB","Microsoft YaHei","微软雅黑","arial","simsun","宋体";}
+a,a:hover,a:active,a:visited,a:link{color:#5c7cd8;}
+.g-bd{width:1200px;margin:0 auto;background:#fff;padding:10px;min-height:600px;}
+.g-ft{text-align:center;color:#333;font-size:12px;padding:30px 0 10px;}
+.g-ft p{color:#bec0c6;padding:8px;}
+.g-ft p a{color:#333;}
+.g-hd{background:#31374b;}
+.g-hd .head{position:relative;width:1200px;margin:0 auto;}
+.g-hd .head .logo{background:url("/res/logo.jpg") no-repeat;width:173px;height:109px;float:left;z-index:10;}
+.g-hd .head .topbar{position:absolute;top:10px;right:0;color:#b2b7c7;}
+.m-menu{margin:59px 0 0;padding:0 30px;list-style:none;}
+.m-menu .menuitem{float:left;padding:0 30px;position:relative;height:50px;line-height:50px;}
+.m-menu .menuitem a{color:#fff;}
+.m-menu .menuitem a .caret{color:#838798;margin-left:5px;}
+.m-menu .menuitem .dropdown-menu{width:100%;min-width:0;top:44px;margin:0;border-radius:0;box-shadow:none;background:#f8f8f8;border-bottom-left-radius:2px;border-bottom-right-radius:2px;border:0;}
+.m-menu .menuitem .dropdown-menu li{padding:0 10px;list-style:none;}
+.m-menu .menuitem .dropdown-menu li a{text-align:center;display:block;line-height:39px;border-top:1px dashed #dcdee6;}
+.m-menu .menuitem .dropdown-menu li a:hover{font-weight:bold;background:#f8f8f8;}
+.m-menu .menuitem:hover{background:#f8f8f8;border-top-left-radius:2px;border-top-right-radius:2px;}
+.m-menu .menuitem:hover a{color:#333;}
+.m-menu .menuitem:hover .dropdown-menu{display:block;}
+.m-menu .active,.m-menu .active-nodrop:hover{border-top-left-radius:2px;border-top-right-radius:2px;background:#f1f1f2;}
+.m-menu .active a,.m-menu .active-nodrop:hover a{color:#333;}
+.progress-kaola{height:17px;}
+.progress-kaola .progress-bar-kaola{background-color:#ef8700;line-height:15px;min-width:3em;}
+.progress-fix{position:fixed;top:0;height:10px;filter:alpha(opacity = 90);opacity:0.9;border-radius:0;width:100%;z-index:10;}
+.breadcrumb{width:1200px;margin:0 auto;padding:20px 10px;margin-bottom:0;background-color:transparent;}
+.breadcrumb a,.breadcrumb >.active{color:#333;}
+blockquote.title{padding:0 10px;border-left:4px solid #e31436;}
+.btn-default-1,a.btn-default-1,.btn-default-1:focus{min-width:100px;background:#fff;border-radius:2px;border-color:#bbb;color:#333;}
+.btn-default-1:hover,a.btn-default-1:hover{background-color:#f3f3f6;color:#333;}
+.btn-kaola,a.btn-kaola,.btn-kaola:focus{min-width:100px;border-radius:2px;background-color:#31374b;border-color:#31374b;color:#fff;}
+.btn-kaola:hover,a.btn-kaola:hover{background-color:#212636;border-color:#212636;color:#fff;}
+.btn-disabled,.btn-disabled:focus,.btn-disabled:hover,a.btn-disabled,a.btn-disabled:hover{background-color:#ccc;border-color:#ccc;color:#fff;cursor:default;}
+.btn-kaola-sm,a.btn-kaola-sm,.btn-kaola-sm:focus{line-height:1.5;padding:2px 10px;min-width:80px;font-size:12px;}
+.btn-kaola-sm-1,a.btn-kaola-sm-1,.btn-kaola-sm-1:focus{min-width:70px;background:#f5961b;border-color:#f5961b;}
+.btn-kaola-sm-1:hover,a.btn-kaola-sm-1:hover{background:#e58a15;border-color:#e58a15;}
+.label-orange{background-color:#ff9e20;padding:2px 6px 2px;font-size:12px;}
+.label-red{background-color:#ef2752;padding:2px 6px 2px;font-size:12px;}
+.form-control{border-radius:0;}
+.control-label{font-weight:normal;}
+.control-label span.star{display:inline-block;margin-right:4px;color:#ee8100;font-weight:bold;}
+.panel-kaola{border-color:#ede4a4;background-color:#fffbe0;border-radius:0;}
+.panel-kaola .panel-heading{font-weight:bold;font-size:18px;}
+.panel-kaola .panel-body>dl{float:left;min-width:20%;}
+.panel-kaola .panel-body>dl:last-child{width:40%;}
+.panel-kaola .panel-body>dl dt,.panel-kaola .panel-body>dl dd{font-weight:normal;line-height:30px;}
+.panel-kaola .panel-body>dl dd{margin-left:160px;}
+.nav-pills{background:#e0e1e3;}
+.nav-pills>li + li{margin:0;}
+.nav-pills>li{min-width:140px;text-align:center;}
+.nav-pills>li a,.nav-pills>li a:hover,.nav-pills>li a:focus{color:#333;background:#e0e1e3;padding:10px 0;border-radius:0;}
+.nav-pills>li a:after{border-right:1px solid #c3c6d0;content:"|";float:right;color:#e0e1e3;}
+.nav-pills>li.active>a:after{content:"";}
+.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{background-color:#31374b;border-radius:0;color:#fff;}
+.nav-category{margin:20px 0;}
+.nav-category li{float:left;}
+.nav-category li >a:hover,.nav-category li >a:focus{background:#fff;}
+.glyphicon-calendar{color:#999;}
+.input-group .form-control-date{width:auto;}
+.table-kaola{border:1px solid #dfe3e9;}
+.table-kaola>thead>tr>th,.table-kaola>tbody>tr>th,.table-kaola>tfoot>tr>th,.table-kaola>thead>tr>td,.table-kaola>tbody>tr>td,.table-kaola>tfoot>tr>td{border:0;border-top:1px solid #dfe3e9;text-align:center;vertical-align:middle;word-wrap:break-word;word-break:break-all;}
+.table-kaola>thead:first-child>tr:first-child>th{border-bottom:1px solid #dfe3e9;border-top:2px solid #898c94;background:#f8f8f8;font-weight:normal;}
+.m-datepicker{padding:6px;margin-top:10px;direction:ltr;display:block;}
+.m-datepicker .zbtn{font-family:"宋体";font-weight:bold;}
+.m-datepicker th,.m-datepicker td{text-align:center;height:28px;width:28px;}
+.m-datepicker .zday th{font-weight:bold;}
+.m-datepicker .zday td a.js-selected{background-color:#212636;-moz-border-radius:2px;border-radius:2px;color:#fff;}
+.m-datepicker .zday td a.js-selected:hover{background-color:#6d47a5;}
+.m-datepicker .zday td a.js-selected.js-disabled{background:#fff;color:#eee;cursor:default;}
+.m-datepicker .zcard{border:none;}
+.m-datepicker-tr:before{top:-7px;right:6px;}
+.m-datepicker:before{content:"";display:inline-block;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid #ccc;border-bottom-color:rgba(0,0,0,0.2);position:absolute;display:none;}
+.m-datepicker-tr:after{top:-6px;right:7px;}
+.m-datepicker:after{content:"";display:inline-block;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:6px solid #fff;position:absolute;display:none;}
+.form-group .sep{position:absolute;left:-7px;top:7px;}
+form .js-invalid{border:1px solid #e32740;}
+.caret-up{border-top:0;border-bottom:4px dashed;}
+.glyphicon-star-1{margin-right:3px;color:#ffcf00;}

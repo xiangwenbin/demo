@@ -1,0 +1,10 @@
+.u-step{text-align:center;padding:30px 0 40px;color:#666;}
+.u-step .badge{background:#ccc;color:#fff;}
+.u-step >span{margin-right:70px;}
+.u-step .active{color:#333;}
+.u-step .active >.badge{background:#31374b;}
+.u-more-cate{position:relative;}
+.u-more-cate >span{display:none;position:absolute;left:55px;top:-26px;padding:15px;width:230px;background:#faf8ee;border:1px solid #eeebdc;text-align:left;}
+.u-more-cate:hover>span{display:block;}
+.u-maxline{width:120px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;text-overflow:ellipsis;}
+.u-maxline-0{width:64px;}
