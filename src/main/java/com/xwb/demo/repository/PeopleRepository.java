@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.xwb.demo.meta.People;
 
-public interface PeopleRepository extends JpaRepository<People, Integer>{
+public interface PeopleRepository extends JpaRepository<People, Long>{
 
 }
