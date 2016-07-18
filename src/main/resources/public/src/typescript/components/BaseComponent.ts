@@ -9,5 +9,5 @@ let BaseComponent = Regular.extend({
     data: {
         hello: "hello world"
     } 
-}); 
+});
 export { BaseComponent};

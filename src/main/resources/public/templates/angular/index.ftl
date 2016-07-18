@@ -8,8 +8,8 @@
 	<script src="/node_modules/core-js/client/shim.min.js"></script> 
 	<script src="/node_modules/zone.js/dist/zone.js"></script> 
 	<script src="/node_modules/reflect-metadata/Reflect.js"></script> 
-	<#--
 	<!--异步数据流解决方案，同Promise-->
+	<#--
 	<script src="/node_modules/rxjs/bundles/Rx.umd.js"></script> 
 	<script src="/node_modules/@angular/core/bundles/core.umd.js"></script> 
 	<script src="/node_modules/@angular/common/bundles/common.umd.js"></script> 

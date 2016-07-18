@@ -17,5 +17,4 @@ class Index extends BaseModule {
         console.log('init elements...');
     }  
 }
-
 new Index(); 
