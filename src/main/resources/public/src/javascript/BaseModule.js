@@ -8,4 +8,4 @@ var BaseModule = (function () {
     };
     return BaseModule;
 }());
-module.exports = BaseModule;
+exports.BaseModule = BaseModule;

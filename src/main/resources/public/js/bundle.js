@@ -52,7 +52,7 @@
 	};
 	__webpack_require__(1);
 	var BaseModule = __webpack_require__(5);
-	var BaseComponent = __webpack_require__(10);
+	var BaseComponent = __webpack_require__(6);
 	var Index = (function (_super) {
 	    __extends(Index, _super);
 	    function Index() {
@@ -438,7 +438,24 @@
 
 
 /***/ },
-/* 6 */,
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var Regular = __webpack_require__(7);
+	if (Regular.config) {
+	    Regular.config({ BEGIN: "{", END: "}" });
+	}
+	var BaseComponent = Regular.extend({
+	    template: '<div>base Template {hello}</div>',
+	    data: {
+	        hello: "hello world"
+	    }
+	});
+	module.exports = BaseComponent;
+
+
+/***/ },
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -651,17 +668,6 @@
 	    throw new Error('process.chdir is not supported');
 	};
 	process.umask = function() { return 0; };
-
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var Regular = __webpack_require__(7);
-	if (Regular.config) {
-	    Regular.config({ BEGIN: "{", END: "}" });
-	}
 
 
 /***/ }

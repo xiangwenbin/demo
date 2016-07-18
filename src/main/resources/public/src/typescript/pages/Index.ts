@@ -1,8 +1,8 @@
-require('../../../css/index.css');
-import BaseModule = require('../BaseModule');
-import BaseComponent = require('../components/BaseComponent');
-
-class Index extends BaseModule {
+import '../../../css/index.css';
+import {BaseModule} from "../BaseModule";
+import {BaseComponent} from "../components/BaseComponent";
+ 
+class Index extends BaseModule {  
     public constructor() {
         super();
 
@@ -15,7 +15,7 @@ class Index extends BaseModule {
     }
     private initElement() {
         console.log('init elements...');
-    }
+    }  
 }
 
-new Index();
+new Index(); 
