@@ -1,7 +1,9 @@
 import '../../../css/index.css';
 import {BaseModule} from "../BaseModule";
 import {BaseComponent} from "../components/BaseComponent";
- 
+/**
+*入口文件
+**/
 class Index extends BaseModule {  
     public constructor() {
         super();

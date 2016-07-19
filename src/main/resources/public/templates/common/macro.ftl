@@ -1,7 +1,7 @@
 <#include "./config.ftl">
 <#macro css>
   <#--mcss处理的bootstrap.mcss 数值样式会精度丢失,暂时引用源css-->
-  <link href="/src/lib/bootstrap/css/bootstrap.css"  rel="stylesheet" type="text/css">
+  <link href="/node_modules/bootstrap/dist/css/bootstrap.css"  rel="stylesheet" type="text/css">
   <link href="${csRoot}base.css" rel="stylesheet" type="text/css"/>
   <link href="${csRoot}module.css" rel="stylesheet" type="text/css"/>
   <#--组件样式-->

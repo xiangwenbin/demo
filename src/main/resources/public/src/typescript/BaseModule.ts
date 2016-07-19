@@ -1,3 +1,6 @@
+/**
+*入口文件基类
+**/
 export class BaseModule {
     public constructor() {
         this.init();
