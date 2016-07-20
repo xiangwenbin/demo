@@ -1,0 +1,1 @@
+webpack --config webpack.config.noangular.js --progress --colors --watch

@@ -40,7 +40,7 @@
 	 		};
 	 	})();**/
 	</script>
-	<script src="/js/bundle.js"></script>
+	<script src="/js/index.js"></script>
   </body>
 </html>
 </#escape>
