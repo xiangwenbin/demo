@@ -6,6 +6,7 @@
 
 ## 项目导入
 * 通过eclipse 以maven的形式导入
+
 ## 工程启动方式
  1. 工程启动配置路径src/mian/resources/config/application.properties,若无持久层需求 可注释掉配置文件里的mysql及 redis配置项
  2. src/main/resources/public 为webapp目录
