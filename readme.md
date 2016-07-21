@@ -3,6 +3,7 @@
 * 后端框架:springboot
 * 前端语言:typescript+angular2 or typescrpit +regular
 * 前端打包工具:gulp(仅用来做angular组件资源的拷贝)+webpack 
+* 开发工具:Visual Studio Code(typescript的开发推荐) +eclipse(java,也可以用spring source) 
 
 ## 项目导入
 * 通过eclipse 以maven的形式导入
