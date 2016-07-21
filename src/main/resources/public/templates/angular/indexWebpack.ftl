@@ -18,7 +18,7 @@
 	<script src="/node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"></script> 
 	-->
 	<!-- 2. Load our 'modules' --> 
-	<script src="/node_modules/systemjs/dist/system.src.js"></script>
+	<#--<script src="/node_modules/systemjs/dist/system.src.js"></script>
 
     <script>
     	var packages = {
@@ -67,10 +67,13 @@
     <script>
       System.import('src/javascript/angular/pages/main.js').catch(function(err){ console.error(err); });
     </script>
+    -->
 </head>
 	<!-- 3. Display the application --> 
 <body> 
 	<my-app>Loading...</my-app> 
 </body>
+<script src="/js/core.js"></script>
+<script src="/js/main.js"></script>
 </html>
 </@compress>
