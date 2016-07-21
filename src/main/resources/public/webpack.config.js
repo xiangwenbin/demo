@@ -39,7 +39,7 @@ module.exports = {
 		}, {
 			/**
 			 * 将src/typescript/路径下的 angular组件样式内敛到js里 styleUrls
-			 * 只能使用相对地址,绝对路径会在node_modules里找
+			 * 只能使用相对地址,绝对路径会在node_modules里找,配置moduleId可以讲绝对路径根路径指向 当前组件所在目录
 			 */
 			test : /\.css$/,
 			include : helpers.root('src', 'typescript'),
