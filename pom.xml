@@ -77,7 +77,23 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>5.0.3.Final</version>
 		</dependency>
-		
+		<!-- json转换包 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.1.15</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.3.2</version>
+		</dependency>
+		<!-- java对象属性拷贝包 -->
+		<dependency>
+		    <groupId>net.sf.dozer</groupId>
+		    <artifactId>dozer</artifactId>
+		    <version>5.5.1</version>
+		</dependency>
 		<!-- mysql -->
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>

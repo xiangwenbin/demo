@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.xwb.demo.meta.People;
 import com.xwb.demo.service.PeopleService;
+import com.xwb.demo.view.PeopleView;
 import com.xwb.demo.view.User;
 
 @Controller
@@ -30,14 +31,14 @@ public class PeopleController {
 	 */
 	@RequestMapping("/addPeople")
 	@ResponseBody
-	public People addPeople(Model  model){
-		People people=new People();
-		people.setName("xwb");
-		people.setAge(10);
-		people.setPhone("13588888888");
-		people.setAddress("寰宇天下");
-		people=peopleService.save(people);
-		return people;
+	public PeopleView addPeople(Model  model){
+		PeopleView peopleView=new PeopleView();
+		peopleView.setName("xwb");
+		peopleView.setAge(10);
+		peopleView.setPhone("13588888888");
+		peopleView.setAddress("寰宇天下");
+		peopleView=peopleService.save(peopleView);
+		return peopleView;
 	}
 	
 	/**
@@ -47,8 +48,8 @@ public class PeopleController {
 	 */
 	@RequestMapping("/findOne")
 	@ResponseBody
-	public People findOne(@RequestParam ("id") Long id){
+	public PeopleView findOne(@RequestParam ("id") Long id){
 		return peopleService.findOne(id);
 	}
-
+	
 }

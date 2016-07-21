@@ -1,9 +1,10 @@
 package com.xwb.demo.service;
 
 import com.xwb.demo.meta.People;
+import com.xwb.demo.view.PeopleView;
 
 public interface PeopleService {
-	public People save(People people);
+	public PeopleView save(PeopleView people);
 	public boolean deleteById(Long id);
-	public People findOne(Long id);
+	public PeopleView findOne(Long id);
 }

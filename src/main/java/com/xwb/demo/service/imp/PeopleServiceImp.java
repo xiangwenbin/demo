@@ -10,7 +10,9 @@ import org.springframework.stereotype.Service;
 import com.xwb.demo.meta.People;
 import com.xwb.demo.repository.PeopleRepository;
 import com.xwb.demo.service.PeopleService;
+import com.xwb.demo.utils.DozerMapperUtils;
 import com.xwb.demo.utils.LoggerUtils;
+import com.xwb.demo.view.PeopleView;
 
 @Service
 public class PeopleServiceImp implements PeopleService{
@@ -19,10 +21,11 @@ public class PeopleServiceImp implements PeopleService{
 	
 	@CachePut(value="people",key="#people.id")
 	@Override
-	public People save(People people) {
+	public PeopleView save(PeopleView peopleView) {
 		// TODO Auto-generated method stub
 		LoggerUtils.ERROR_LOG.error("save...");
-		return peopleRepository.save(people);
+		People people =peopleRepository.save(DozerMapperUtils.map(peopleView, People.class));
+		return DozerMapperUtils.map(people, PeopleView.class);
 	}
 
 	@Override
@@ -37,12 +40,15 @@ public class PeopleServiceImp implements PeopleService{
 			return false;
 		}
 	}
-	@Cacheable(value="people")
+	
+//	@Cacheable(value="people")
 	@Override
-	public People findOne(Long id) {
+	public PeopleView findOne(Long id) {
 		// TODO Auto-generated method stub
 		LoggerUtils.ERROR_LOG.error("findOne..."+id);
-		return peopleRepository.findOne(id);
+		People people=peopleRepository.findOne(id);
+		
+		return DozerMapperUtils.map(people, PeopleView.class);
 	}
 
 }

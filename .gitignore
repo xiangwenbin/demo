@@ -1,4 +1,6 @@
 ﻿#编译目录与IDE配置文件
+/.externalToolBuilders
+/.vscode
 /target
 /bin
 /.settings/

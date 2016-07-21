@@ -36,21 +36,21 @@ public class IndexController {
 		return user;
 	}
 	 
-	/**
-	 * 数据库操作添加一条记录
-	 * @param model
-	 * @return
-	 */
-	@RequestMapping("/ajax/addPeople")
-	@ResponseBody
-	public People ajaxIndex(Model  model){
-		People people=new People();
-		people.setName("xwb");
-		people.setAge(10);
-		people.setPhone("13588888888");
-		people.setAddress("寰宇天下");
-		people=peopleService.save(people);
-		return people;
-	}
+//	/**
+//	 * 数据库操作添加一条记录
+//	 * @param model
+//	 * @return
+//	 */
+//	@RequestMapping("/ajax/addPeople")
+//	@ResponseBody
+//	public People ajaxIndex(Model  model){
+//		People people=new People();
+//		people.setName("xwb");
+//		people.setAge(10);
+//		people.setPhone("13588888888");
+//		people.setAddress("寰宇天下");
+//		people=peopleService.save(people);
+//		return people;
+//	}
 
 }
