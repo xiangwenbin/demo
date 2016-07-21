@@ -1,6 +1,5 @@
 /**
- * angular 打包
- * 
+ * angular 打包 loaders 从右至左流
  */
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -10,7 +9,8 @@ console.log(helpers.root("css"));
 
 module.exports = {
 	entry : {
-		main : './src/typescript/angular/pages/main.ts'
+		main : './src/typescript/angular/pages/main.ts',
+		index : './src/typescript/angular/pages/index.ts'
 	},
 	output : {
 		path : './dist',
@@ -32,14 +32,14 @@ module.exports = {
 			test : /\.html$/,
 			loader : 'html'
 		}, {
-			/** 打包外联css* */
+			/** 将import css 打包生产外联css* */
 			test : /\.css$/,
 			exclude : helpers.root('src', 'typescript'),
 			loader : ExtractTextPlugin.extract('style', 'css?sourceMap')
 		}, {
 			/**
 			 * 将src/typescript/路径下的 angular组件样式内敛到js里 styleUrls
-			 * 只能使用相对地址,绝对路径会在node_modules里找*
+			 * 只能使用相对地址,绝对路径会在node_modules里找
 			 */
 			test : /\.css$/,
 			include : helpers.root('src', 'typescript'),
