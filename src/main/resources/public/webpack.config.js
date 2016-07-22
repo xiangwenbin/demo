@@ -5,16 +5,34 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./config/helpers');
-console.log(helpers.root("css"));
-
-module.exports = {
-	entry : {
-		main : './src/typescript/angular/pages/main.ts',
-		index : './src/typescript/angular/pages/index.ts'
+////////////////////////////////////////////
+/** 将ts 入口文件路径目录解析成 entry map* */
+var entry = helpers.getEntry('src', 'typescript', 'angular', 'pages');
+console.log("entry:"+entry);
+//////////////////////////////////////
+var plugins = [
+/** 提取公共js * */
+new webpack.optimize.CommonsChunkPlugin({
+	name : [ 'core' ]
+}),
+/** 将js里的外联 css打包提取 * */
+new ExtractTextPlugin('[name].[hash].css'),
+/** 压缩混淆js * */
+new webpack.optimize.UglifyJsPlugin({
+	output : {
+		comments : false,
 	},
+	compress : {
+		warnings : false
+	}
+}), new HtmlWebpackPlugin() ];
+////////////////////////////////////////////
+module.exports = {
+	entry : entry,
 	output : {
 		path : './dist',
-		publicPath : '/',
+		/**生成index.html **/
+		publicPath : '/dist',
 		/** filename : '[name].[hash].js' * */
 		filename : '[name].js',
 		/** 异步加载的js文件* */
@@ -25,9 +43,12 @@ module.exports = {
 	},
 	module : {
 		loaders : [ {
-			/** angular2-template-loader angular组件 templateUrl styleUrls 路径转换* */
+			/** 
+			 * angular2-template-loader angular组件 templateUrl styleUrls 路径转换 
+			 * webpack-replace 将ts里无法被解析的字符串.css!转换成.css
+			 * */
 			test : /\.ts$/,
-			loaders : [ 'ts', 'angular2-template-loader' ]
+			loaders : [ 'ts', 'angular2-template-loader','webpack-replace?{search: ".css!",replace: ".css"}' ]
 		}, {
 			test : /\.html$/,
 			loader : 'html'
@@ -46,20 +67,5 @@ module.exports = {
 			loader : 'raw'
 		} ]
 	},
-	plugins : [
-	/** 提取公共js * */
-	new webpack.optimize.CommonsChunkPlugin({
-		name : [ 'core' ]
-	}),
-	/** 将js里的外联 css打包提取 * */
-	new ExtractTextPlugin('[name].[hash].css'),
-	/** 压缩混淆js * */
-	new webpack.optimize.UglifyJsPlugin({
-		output : {
-			comments : false,
-		},
-		compress : {
-			warnings : false
-		}
-	}) ]
+	plugins : plugins
 }

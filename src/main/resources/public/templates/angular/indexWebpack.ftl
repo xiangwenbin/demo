@@ -18,62 +18,12 @@
 	<script src="/node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"></script> 
 	-->
 	<!-- 2. Load our 'modules' --> 
-	<#--<script src="/node_modules/systemjs/dist/system.src.js"></script>
-
-    <script>
-    	var packages = {
-		    'app':{ main: 'main.js',  defaultExtension: 'js' },
-		    'rxjs':{ defaultExtension: 'js' },
-		    'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
-		  };
-		  var packages = {
-		    'app':{ main: 'main.js',  defaultExtension: 'js' },
-		    'rxjs':{ defaultExtension: 'js' },
-		    'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
-		  };
-		  var ngPackageNames = [
-		    'common',
-		    'compiler',
-		    'core',
-		    'forms',
-		    'http',
-		    'platform-browser',
-		    'platform-browser-dynamic',
-		    'router',
-		    'router-deprecated',
-		    'upgrade',
-		  ];
-		
-		  function packIndex(pkgName) {
-		    packages['@angular/'+pkgName] = { main: 'index.js', defaultExtension: 'js' };
-		  }
-		  ngPackageNames.forEach(packIndex);
-    	System.config({
-    		baseURL:'/',
-    		defaultJSExtensions:true,
-    		map: {
-		    	"@angular":'node_modules/@angular',
-		    	'angular2-in-memory-web-api':'node_modules/angular2-in-memory-web-api',
-   				'rxjs':'node_modules/rxjs'
-		  	},
-    		packages:packages
-    	});
-    	
-    	/**
-    		模块解析顺序
-    	           先加上跟路径baseURL,然后通过map替换包，最后通过packages，替换main下的.js
-    	**/
-    </script>
-    <script>
-      System.import('src/javascript/angular/pages/main.js').catch(function(err){ console.error(err); });
-    </script>
-    -->
 </head>
 	<!-- 3. Display the application --> 
 <body> 
 	<my-app>Loading...</my-app> 
 </body>
-<script src="/js/core.js"></script>
-<script src="/js/main.js"></script>
+<script src="/dist/core.js"></script>
+<script src="/dist/main.js"></script>
 </html>
 </@compress>

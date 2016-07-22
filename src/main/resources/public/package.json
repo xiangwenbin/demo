@@ -49,6 +49,15 @@
     "ts-loader": "^0.8.1",
     "typescript": "^1.8.10",
     "typings": "^1.0.4",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-replace": "^1.0.0"
+  },
+  "jspm": {
+    "dependencies": {
+      "css": "github:systemjs/plugin-css@^0.1.23"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
   }
 }
